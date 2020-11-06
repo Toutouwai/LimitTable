@@ -1,4 +1,4 @@
-<?php
+<?php namespace ProcessWire;
 
 /**
  *
@@ -23,12 +23,16 @@ class LimitTable extends WireData implements Module, ConfigurableModule {
 	public static function getModuleInfo() {
 		return array(
 			'title' => 'Limit Table',
+			'class' => 'LimitTable',
 			'version' => '0.1.2',
 			'summary' => 'Allows limits and restrictions to be placed on selected Table fields.',
 			'author' => 'Robin Sallis',
 			'href' => 'https://github.com/Toutouwai/LimitTable',
 			'icon' => 'table',
 			'autoload' => 'template=admin',
+			'requires' => [
+				'ProcessWire>=3.0'
+			]
 		);
 	}
 
