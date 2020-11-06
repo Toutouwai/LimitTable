@@ -24,7 +24,7 @@ class LimitTable extends WireData implements Module, ConfigurableModule {
 		return array(
 			'title' => 'Limit Table',
 			'class' => 'LimitTable',
-			'version' => '0.1.2',
+			'version' => '0.2.0',
 			'summary' => 'Allows limits and restrictions to be placed on selected Table fields.',
 			'author' => 'Robin Sallis',
 			'href' => 'https://github.com/Toutouwai/LimitTable',
