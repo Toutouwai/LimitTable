@@ -8,7 +8,7 @@ class LimitTable extends WireData implements Module, ConfigurableModule {
 	public static function getModuleInfo() {
 		return array(
 			'title' => 'Limit Table',
-			'version' => '0.1.4',
+			'version' => '0.1.5',
 			'summary' => 'Allows limits and restrictions to be placed on selected Table fields.',
 			'author' => 'Robin Sallis',
 			'href' => 'https://github.com/Toutouwai/LimitTable',
@@ -92,6 +92,7 @@ class LimitTable extends WireData implements Module, ConfigurableModule {
 				$role_class = $role === 'role-all' ? '' : ".$role";
 				$prefix = "body$role_class .Inputfield_{$if_name}";
 				if($cfg["nodrag_{$unique}"]) $css .= "$prefix .InputfieldTableRowSortHandle, ";
+				if($cfg["nodrag_{$unique}"] && $cfg["limit_{$unique}"] == 1) $css .= "$prefix .InputfieldTableActionSort, ";
 				if($cfg["notrash_{$unique}"]) $css .= "$prefix .InputfieldTableRowDeleteLink, ";
 				$css = rtrim($css, ', ');
 				if($css) $css .= " { display:none !important; }" ;
